@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100px;
+  height: 100px;
+  background-color: cyan;
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+}
+section::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 95%;
+  top: 40px;
+  background-color: black;
+  transform: skewY(35deg);
+  z-index: -1;
+}/*# sourceMappingURL=style.css.map */
