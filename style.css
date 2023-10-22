@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Martian Mono", monospace;
 }
 
 nav {
   width: 100%;
-}
-nav .nav-img {
+  height: 900px;
   position: relative;
   background-image: url(https://preview.colorlib.com/theme/gourmet/img/hero_1.jpg);
   background-size: cover;
@@ -16,112 +16,137 @@ nav .nav-img {
   background-position: center;
   background-repeat: no-repeat;
 }
-nav .nav-img::before {
+nav::before {
   position: absolute;
+  z-index: 1;
   content: "";
   width: 100%;
-  height: 120px;
-  bottom: -70px;
+  height: 200px;
+  bottom: -80px;
   background-color: aliceblue;
   transform: skewY(-6deg);
-  z-index: 1;
 }
-nav .nav-img .nav {
+nav .nav {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  justify-content: space-around;
+  padding: 30px 20px;
 }
-nav .nav-img .nav ul {
+nav .nav ul {
   display: flex;
   justify-content: space-around;
   list-style: none;
-  gap: 10px;
+  gap: 20px;
 }
-nav .nav-img .nav ul li a {
-  font-size: 10px !important;
-}
-nav .nav-img .nav a {
+nav .nav a {
   text-decoration: none;
   color: white;
 }
-nav .nav-img .text {
+nav .nav a:hover {
+  color: #ff7404;
+}
+nav .nav #gourmet {
+  font-size: 30px;
+  color: white !important;
+}
+nav .text {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-nav .nav-img .text .text-div {
+nav .text .text-div {
   width: 100%;
   height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-nav .nav-img .text .text-div .text-div-middle {
+nav .text .text-div .text-div-middle {
   width: 60%;
   height: 150px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  flex-direction: column;
   color: white;
+  font-size: 50px;
 }
-nav .nav-img .text .text-div .text-div-middle h1 {
+nav .text .text-div .text-div-middle h1 {
   font-family: "Martian Mono", monospace;
 }
-nav .nav-img .text .text-div .text-div-middle a {
+nav .text .text-div .text-div-middle a {
   border: 1px solid white;
   padding: 5px;
   text-decoration: none;
   color: white;
-  font-size: 10px;
+  font-size: 20px;
+}
+nav .text .text-div .text-div-middle a:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
 }
 
-section {
+header {
   position: absolute;
-  width: 100%;
-  height: 200px;
-  background-color: aliceblue;
   z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-section .section-div {
   width: 100%;
-  height: 100px;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .header-div {
+  width: 90%;
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 30px;
-  padding: 10px 100px;
 }
-section .section-div div {
-  background-color: black;
-}
-section .section-div .sec-left {
-  background-image: url(https://preview.colorlib.com/theme/gourmet/img/hero_1.jpg.webp);
+header .header-div .hed-left img {
+  width: 100%;
+  height: 100%;
   background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+header .header-div .hed-right {
   display: flex;
+  align-items: flex-start;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
-section .section-div .sec-right {
-  background-color: blueviolet;
+header .header-div .hed-right .hed-right-div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 200px;
 }
-section::before {
+header .header-div .hed-right .hed-right-div img {
+  width: 100px;
+  height: 100px;
+}
+header .header-div .hed-right .hed-right-div h1::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2.5px;
+  background-color: #ff7404;
+  margin-bottom: 8px;
+}
+header::before {
   position: absolute;
+  z-index: -1;
   content: "";
   width: 100%;
-  height: 120px;
-  bottom: -90px;
+  height: 200px;
+  bottom: -100px;
   background-color: aliceblue;
   transform: skewY(-6deg);
-  z-index: -1;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,26 @@
+@mixin display($align:center, $justify:center){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin img(){
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@mixin div-pos($index:1){
+    position: absolute;
+    z-index: $index;
+}
+// @mixin skew(){
+//     position: absolute;
+//     content: '';
+//     width: 100%;
+//     height: 200px;
+//     bottom: -100px;
+//     background-color: $back-color;
+//     transform: skewY(-6deg);
+//     z-index: -1;
+// }
